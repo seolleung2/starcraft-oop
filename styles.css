@@ -149,3 +149,15 @@ body {
 .panelEnBay .upgrade.defence {
   background-image: url("./images/defence.png");
 }
+
+.terranUnits {
+  position: absolute;
+}
+
+.playground {
+  position: absolute;
+  right: 5%;
+  bottom: 5%;
+  width: 1100px;
+  height: 600px;
+}
