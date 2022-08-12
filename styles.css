@@ -11,7 +11,7 @@ body {
 }
 
 .barrack {
-  position: relative;
+  position: absolute;
   left: 44%;
   top: 4%;
   width: 280px;
@@ -30,9 +30,9 @@ body {
 }
 
 .engineeringBay {
-  position: relative;
-  left: 80%;
-  top: 18%;
+  position: absolute;
+  left: 5%;
+  bottom: 40%;
   width: 300px;
   height: 200px;
   background-image: url("./images/engineeringBay.webp");
@@ -56,4 +56,96 @@ body {
 
 .clicked {
   border: 1px solid #33ff33;
+}
+
+.panelBarrack {
+  display: none;
+  justify-content: space-around;
+  align-items: center;
+  position: absolute;
+  top: 25%;
+  left: 43%;
+  width: 300px;
+  height: 100px;
+  background-color: #28282b;
+  border: 4px solid #ffbf00;
+  border-radius: 6px;
+}
+
+.panelBarrack.open {
+  display: flex;
+}
+
+.panelBarrack .unit {
+  width: 80px;
+  height: 80px;
+  border: 2px solid #28282b;
+  border-radius: 2px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  opacity: 0.5;
+  cursor: pointer;
+}
+
+.panelBarrack .unit:hover {
+  border: 2px solid #33ff33;
+  opacity: 1;
+}
+
+.panelBarrack .unit.marine {
+  background-image: url("./images/marine.gif");
+}
+
+.panelBarrack .unit.firebat {
+  background-image: url("./images/firebat.gif");
+}
+
+.panelBarrack .unit.medic {
+  background-image: url("./images/medic.gif");
+}
+
+.panelEnBay {
+  display: none;
+  justify-content: space-around;
+  align-items: center;
+  position: absolute;
+  left: 5%;
+  bottom: 30%;
+  width: 300px;
+  height: 100px;
+  background-color: #28282b;
+  border: 4px solid #ffbf00;
+  border-radius: 6px;
+}
+
+.panelEnBay.open {
+  display: flex;
+}
+
+.panelEnBay .upgrade {
+  width: 80px;
+  height: 80px;
+  border: 2px solid #28282b;
+  border-radius: 2px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  opacity: 0.5;
+  cursor: pointer;
+}
+
+.panelEnBay .upgrade:hover {
+  border: 2px solid #33ff33;
+  opacity: 1;
+}
+
+.panelEnBay .upgrade.stimPack {
+  background-image: url("./images/stimpack.png");
+}
+
+.panelEnBay .upgrade.attack {
+  background-image: url("./images/attack.png");
+}
+
+.panelEnBay .upgrade.defence {
+  background-image: url("./images/defence.png");
 }

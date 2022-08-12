@@ -8,14 +8,29 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <audio id="barrackSound" src="sounds/brkSound.wav"></audio>
     <audio id="enbSound" src="sounds/enbSound.wav"></audio>
-    <script defer src="src/Barrack/index.js"></script>
+    <audio id="birthMarineSound" src="sounds/birthMarine.wav"></audio>
+    <audio id="birthFirebatSound" src="sounds/birthFirebat.wav"></audio>
+    <audio id="birthMedicSound" src="sounds/birthMedic.wav"></audio>
+    <audio id="upgradeSound" src="sounds/upgradeSound.wav"></audio>
+
+    <script defer src="src/index.js"></script>
   </head>
   <body>
     <div class="barrack">
       <div class="circle brk"></div>
     </div>
+    <div class="panelBarrack">
+      <div class="unit marine"></div>
+      <div class="unit firebat"></div>
+      <div class="unit medic"></div>
+    </div>
     <div class="engineeringBay">
       <div class="circle enb"></div>
+    </div>
+    <div class="panelEnBay">
+      <div class="upgrade stimPack"></div>
+      <div class="upgrade attack"></div>
+      <div class="upgrade defence"></div>
     </div>
   </body>
 </html>
