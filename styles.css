@@ -168,3 +168,35 @@ body {
 .terranMedic {
   cursor: pointer;
 }
+
+.selectedUnit {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 80px;
+  border: 2px solid #33ff33;
+  border-radius: 50%;
+}
+
+.upgradeInfo {
+  position: relative;
+  top: 5%;
+  left: 10%;
+  color: #fff;
+  font-size: 24px;
+  font-weight: bold;
+  width: 140px;
+  height: fit-content;
+}
+
+.upgradeInfo .attackInfo {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.upgradeInfo .defenceInfo {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}

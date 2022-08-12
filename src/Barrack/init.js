@@ -63,12 +63,18 @@ function upgradeUnits(type) {
   const attackInfo = Number(window.localStorage.getItem("attack"));
   const defenceInfo = Number(window.localStorage.getItem("defence"));
 
+  const attackEl = document.querySelector(".attackInfo .info");
+
+  const defenceEl = document.querySelector(".defenceInfo .info");
+
   switch (type) {
     case "attack":
       window.localStorage.setItem("attack", attackInfo + 3);
+      attackEl.textContent = attackInfo + 3;
       break;
     case "defence":
       window.localStorage.setItem("defence", defenceInfo + 2);
+      defenceEl.textContent = defenceInfo + 2;
       break;
     case "hasStimpack":
       window.localStorage.setItem("hasStimpack", true);
@@ -99,18 +105,24 @@ window.addEventListener("DOMContentLoaded", () => {
 });
 
 function clickMarineHandler(event) {
+  event.target.parentNode.classList.add("selectedUnit");
+
   const stimpackMarineSound = document.querySelector("#stimpackMarineSound");
 
   stimpackMarineSound.play();
 }
 
 function clickFirebatHandler(event) {
+  event.target.parentNode.classList.add("selectedUnit");
+
   const firebatNewSound = document.querySelector("#firebatNewSound");
 
   firebatNewSound.play();
 }
 
 function clickMedicHandler(event) {
+  event.target.parentNode.classList.add("selectedUnit");
+
   const medicNewSound = document.querySelector("#medicNewSound");
   medicNewSound.play();
 }

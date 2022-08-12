@@ -16,7 +16,6 @@ const panelEnBayEl = document.querySelector(".panelEnBay");
 
 const panelMarineEl = document.querySelector(".panelBarrack .marine");
 const birthMarineSound = document.querySelector("#birthMarineSound");
-// * 스팀팩 마린 사운드 삽입
 
 const panelMedicEl = document.querySelector(".panelBarrack .medic");
 const birthMedicSound = document.querySelector("#birthMedicSound");
@@ -41,11 +40,17 @@ engineeringEl.addEventListener("click", () => {
 });
 
 document.addEventListener("click", (event) => {
+  const selectedUnitEl = document.querySelectorAll(
+    "span.terranUnits.selectedUnit"
+  );
+
   const targetEl = event.target;
   const isBarrackNearby = targetEl.closest(".barrack");
   const isPanelBrkNearby = targetEl.closest(".panelBarrack");
   const isEngineeringBayNearBy = targetEl.closest(".engineeringBay");
   const isPanelEnBayNearBy = targetEl.closest(".panelEnBay");
+
+  const isUnitNearby = targetEl.closest("span.terranUnits.selectedUnit");
 
   if (!isBarrackNearby && !isPanelBrkNearby) {
     roundedBarrack.classList.remove("clicked");
@@ -55,6 +60,10 @@ document.addEventListener("click", (event) => {
   if (!isEngineeringBayNearBy && !isPanelEnBayNearBy) {
     roundedEnBay.classList.remove("clicked");
     panelEnBayEl.classList.remove("open");
+  }
+
+  if (!isUnitNearby) {
+    selectedUnitEl.forEach((unit) => unit.classList.remove("selectedUnit"));
   }
 });
 
@@ -82,10 +91,14 @@ panelUpgradestimPackEl.addEventListener("click", () => {
   upgradeSound.play();
 });
 
-// window.addEventListener("beforeunload", (event) => {
-//   event.preventDefault();
-//   event.returnValue = "";
-//   window.localStorage.setItem("attack", 7);
-//   window.localStorage.setItem("defence", 4);
-//   window.localStorage.setItem("hasStimpack", false);
-// });
+const attackEl = document.querySelector(".attackInfo .info");
+
+const attackInfo = window.localStorage.getItem("attack");
+
+attackEl.textContent = attackInfo;
+
+const defenceEl = document.querySelector(".defenceInfo .info");
+
+const defenceInfo = window.localStorage.getItem("defence");
+
+defenceEl.textContent = defenceInfo;
