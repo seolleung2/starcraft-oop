@@ -131,6 +131,7 @@ body {
   background-repeat: no-repeat;
   opacity: 0.5;
   cursor: pointer;
+  z-index: 3;
 }
 
 .panelEnBay .upgrade:hover {
@@ -160,4 +161,10 @@ body {
   bottom: 5%;
   width: 1100px;
   height: 600px;
+}
+
+.terranMarine,
+.terranFirebat,
+.terranMedic {
+  cursor: pointer;
 }

@@ -1,3 +1,7 @@
+window.localStorage.setItem("attack", 7);
+window.localStorage.setItem("defence", 4);
+window.localStorage.setItem("hasStimpack", false);
+
 const barrackEl = document.querySelector(".barrack");
 const engineeringEl = document.querySelector(".engineeringBay");
 
@@ -12,6 +16,8 @@ const panelEnBayEl = document.querySelector(".panelEnBay");
 
 const panelMarineEl = document.querySelector(".panelBarrack .marine");
 const birthMarineSound = document.querySelector("#birthMarineSound");
+// * 스팀팩 마린 사운드 삽입
+
 const panelMedicEl = document.querySelector(".panelBarrack .medic");
 const birthMedicSound = document.querySelector("#birthMedicSound");
 const panelFirebatEl = document.querySelector(".panelBarrack .firebat");
@@ -75,3 +81,11 @@ panelUpgradeDefenceEl.addEventListener("click", () => {
 panelUpgradestimPackEl.addEventListener("click", () => {
   upgradeSound.play();
 });
+
+// window.addEventListener("beforeunload", (event) => {
+//   event.preventDefault();
+//   event.returnValue = "";
+//   window.localStorage.setItem("attack", 7);
+//   window.localStorage.setItem("defence", 4);
+//   window.localStorage.setItem("hasStimpack", false);
+// });

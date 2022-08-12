@@ -21,7 +21,7 @@ class UnitClass {
     let unitImg = document.createElement("img");
     unitImg.src = "";
     unitImg.width = 40;
-    unitImg.className = "imposter";
+    // unitImg.className = "imposter";
     unitEl.appendChild(unitImg);
     return unitEl;
   }
