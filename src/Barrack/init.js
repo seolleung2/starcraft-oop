@@ -70,11 +70,11 @@ function upgradeUnits(type) {
   switch (type) {
     case "attack":
       window.localStorage.setItem("attack", attackInfo + 3);
-      attackEl.textContent = attackInfo + 3;
+      attackEl.textContent = `+ ${attackInfo + 3}`;
       break;
     case "defence":
       window.localStorage.setItem("defence", defenceInfo + 2);
-      defenceEl.textContent = defenceInfo + 2;
+      defenceEl.textContent = `+ ${defenceInfo + 2}`;
       break;
     case "hasStimpack":
       window.localStorage.setItem("hasStimpack", true);
